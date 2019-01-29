@@ -57,11 +57,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
-  paddin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 .background {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,6 +69,53 @@ body {
 .box {
   margin-top: -10vh;
   width: 40vw;
+}
+
+.navbar span.pol {
+  color: #4dab7f;
+  margin: 20px;
+}
+
+.navbar {
+  background-color: #35475e;
+  overflow: hidden;
+  height: 63px;
+  z-index: 3;
+  border-bottom: #4dab7f 3px solid;
+}
+
+.navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.dash a {
+  background-color: #4dab7f;
+}
+
+.navbar ul {
+  margin: 8px 0 0 0;
+  list-style: none;
+  font-weight: 500;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: #000;
+  border-radius: 10px;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  height: 44px;
+  background-color: #fff;
+  border-bottom: 3px solid #2d3d51;
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
@@ -89,7 +136,7 @@ body {
 }
 
 .login-head {
-  padding: 2em 0;
+  padding: 32px 0;
   background: #3a4d6f;
   position: relative;
   border-radius: 10px;
