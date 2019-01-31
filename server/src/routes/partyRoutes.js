@@ -4,7 +4,10 @@ import partyController from "../controllers/partyControllers";
 const partyRoutes = express.Router();
 
 partyRoutes.get("/parties", partyController.getAllParties);
+
 partyRoutes.get("/parties/:id", partyController.getSingleParty);
+
+partyRoutes.post("/parties", partyController.createNewParty);
 
 export default partyRoutes;
 
