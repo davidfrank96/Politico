@@ -7,15 +7,12 @@ class partyController {
       status: res.statusCode,
       data: party
     });
-    }
-    
-    //Get a single student
-    //static getSingleParty(req, res) {
-    //    const findParty = party.find(party=>)
-    //}
+  }
 
+  //Get a single student
+  //static getSingleParty(req, res) {
+  //    nconst findParty = party.find(party=>)
+  //}
 }
-
-
 
 export default partyController;

@@ -6,3 +6,5 @@ const partyRoutes = express.Router();
 partyRoutes.get("/parties", partyController.getAllParties);
 
 export default partyRoutes;
+
+//

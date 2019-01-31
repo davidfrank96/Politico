@@ -9,7 +9,7 @@ const party = [
     id: 102,
     name: "victory",
     hqAddress: "andela",
-    logoUrl: "www.jesusisy.com"
+    logoUrl: "www.jesussy.com"
   },
   {
     id: 103,
@@ -21,7 +21,7 @@ const party = [
     id: 104,
     name: "tefe",
     hqAddress: "andela",
-    logoUrl: "www.jesusisy.com"
+    logoUrl: "jesuslovesme.com"
   }
 ];
 
