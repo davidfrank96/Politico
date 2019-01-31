@@ -9,10 +9,19 @@ class partyController {
     });
   }
 
-  //Get a single student
-  //static getSingleParty(req, res) {
-  //    nconst findParty = party.find(party=>)
-  //}
+  // Get a single party
+  static getSingleParty(req, res) {
+    const findParty = party.find(
+      partyobj => partyobj.id === parseInt(req.params.id, 10)
+    );
+
+    if (findParty) {
+      return res.status(200).json({
+        status: res.statusCode,
+        data: findParty
+      });
+    }
+  }
 }
 
 export default partyController;
