@@ -14,3 +14,19 @@ describe("getAllParty", () => {
       });
   });
 });
+
+describe('POST Party', () => {
+  it('it should not POST a Political 
+
+Party without a name', (done) => { chai.request(app) .post
+
+      ('/api/v1/parties').send({ logoUrl: 'www.image.com/img.jpg', })
+
+      .end((err, res) => {
+        res.should.have.status(400);
+
+        res.body.should.be.a('object'); res.body.should.have.property
+
+          ('message').eql('Party name is required'); done();
+      });
+});

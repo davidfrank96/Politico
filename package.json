@@ -2,7 +2,7 @@
   "name": "politico",
   "version": "1.0.0",
   "description": "This is a Site were User can go vote and use for the coming elections",
-  "main": "app.js",
+  "main": "./server/app.js",
   "scripts": {
     "start": "babel-node app.js",
     "test": "mocha --require @babel/register ./tests/test.js",
