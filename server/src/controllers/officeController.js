@@ -8,5 +8,21 @@ class OfficeController {
       data: Office
     });
   }
+
+  static getSingleOffice(req, res) {
+    const findOffice = Office.find(
+      officeobj => officeobj.id === parseInt(req.params.id, 10)
+    );
+
+    if (findOffice) {
+      return res.status(200).json({
+        status: res.statusCode,
+        data: findOffice
+      });
+    }
+    return res.status(404).json({
+      message: "Not Found"
+    });
+  }
 }
 export default OfficeController;
