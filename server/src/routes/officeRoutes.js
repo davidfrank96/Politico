@@ -7,4 +7,6 @@ officeRoutes.get("/office", OfficeController.getAllOffices);
 
 officeRoutes.get("/office/:id", OfficeController.getSingleOffice);
 
+officeRoutes.post("/office", OfficeController.createNewOffice);
+
 export default officeRoutes;

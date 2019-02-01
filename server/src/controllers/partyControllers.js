@@ -7,8 +7,6 @@ class partyController {
       status: res.statusCode,
       data: party
     });
-    
-    
   }
 
   // Get a single party
@@ -24,8 +22,8 @@ class partyController {
       });
     }
     return res.status(404).json({
-      message: 'Not Found',
-    })
+      message: "Not Found"
+    });
   }
 
   // Create new party

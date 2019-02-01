@@ -4,12 +4,14 @@
   "description": "This is a Site were User can go vote and use for the coming elections",
   "main": "./server/app.js",
   "scripts": {
-    "start": "node ./server/dist/src/app.js",
+    "start": "node ./server/dist/app.js",
     "build": "npm run clean && babel server -d server/dist",
     "clean": "rm -rf server/dist",
     "heroku-postbuild": "npm run build",
     "test": "mocha --require @babel/register ./tests/test.js",
-    "start:dev": "nodemon --watch server --exec babel-node server/src/app.js"
+    "start:dev": "nodemon --watch server --exec babel-node server/src/app.js",
+    "coverage": "npm run nyc -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
+    "nyc": "nyc --reporter=lcov --reporter=text mocha 'tests/test'--compilers babel-register --recursive --timeout 50000 --exit"
   },
   "repository": {
     "type": "git",
@@ -35,8 +37,11 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
+    "coveralls": "^3.0.2",
+    "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.9",
+    "nyc": "^13.1.0",
     "supertest": "^3.4.2"
   }
 }

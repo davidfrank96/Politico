@@ -2,26 +2,22 @@ const Office = [
   {
     id: 1111,
     name: "presideint",
-    hqAddress: "andela",
-    logoUrl: "www.president.com"
+    type: "Fedral"
   },
   {
     id: 2222,
-    name: "Governor",
-    hqAddress: "andela",
-    logoUrl: "www.Governor.com"
+    name: "secertary",
+    type: "Fedral"
   },
   {
     id: 3333,
-    name: "chairmain",
-    hqAddress: "andela",
-    logoUrl: "www.chairman.com"
+    name: "Chairmain",
+    type: "l.G.A"
   },
   {
     id: 4444,
-    name: "manager",
-    hqAddress: "andela",
-    logoUrl: "www.manager.com"
+    name: "governor",
+    type: "state"
   }
 ];
 
