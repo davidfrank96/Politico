@@ -9,6 +9,8 @@ partyRoutes.get("/parties/:id", partyController.getSingleParty);
 
 partyRoutes.post("/parties", partyController.createNewParty);
 
+partyRoutes.patch("/parties/:id/name", partyController.updatePartyName);
+
 export default partyRoutes;
 
 //
