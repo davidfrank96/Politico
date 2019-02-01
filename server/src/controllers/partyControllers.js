@@ -7,6 +7,8 @@ class partyController {
       status: res.statusCode,
       data: party
     });
+    
+    
   }
 
   // Get a single party
@@ -21,6 +23,9 @@ class partyController {
         data: findParty
       });
     }
+    return res.status(404).json({
+      message: 'Not Found',
+    })
   }
 
   // Create new party
@@ -33,7 +38,7 @@ class partyController {
       });
     }
     const newParty = {
-      id: party.length + 1,
+      id: req.body.id,
       name: req.body.name,
       logoUrl: req.body.logoUrl
     };
@@ -72,6 +77,28 @@ class partyController {
     return res.status(404).json({
       status: res.statusCode,
       message: "Party id not found"
+    });
+  }
+
+  //Delete party
+
+  static deleteParty(req, res) {
+    const findParty = party.find(
+      partyobt => partyobt.id === parseInt(req.params.id, 10)
+    );
+    if (!findParty) res.status(404).send("The record does not exist");
+
+    const index = party.indexOf(findParty);
+    party.splice(index, 1);
+
+    res.status(200).json({
+      status: res.statusCode,
+      data: [
+        {
+          id: findParty.id,
+          message: "Party has been deleted"
+        }
+      ]
     });
   }
 }
