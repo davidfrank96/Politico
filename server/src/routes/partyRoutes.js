@@ -15,6 +15,7 @@ partyRoutes.patch("/parties/:id/name", partyController.updatePartyName);
 
 partyRoutes.delete("/parties/:id", partyController.deleteParty);
 
+
 export default partyRoutes;
 
 //

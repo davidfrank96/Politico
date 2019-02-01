@@ -2,7 +2,7 @@ import express from "express";
 import logger from "morgan";
 import bodyParser from "body-parser";
 import partyRoutes from "./routes/partyRoutes";
-//import officeRoutes from "./routes/officeRoutes";
+import officeRoutes from "./routes/officeRoutes";
 
 const app = express();
 
@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/v1/", partyRoutes);
-//app.use(officeRoutes);
+app.use("/api/v1/", officeRoutes);
 
 app.listen(port, () => {
   console.log(`App started and listening on port: ${port}`);
