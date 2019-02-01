@@ -5,9 +5,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Source Sans Pro", sans-serif;
-  background-color: #d5dae5;
+
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: #38384d;
 }
 
@@ -672,7 +671,6 @@ footer {
   border-radius: 1px;
 }
 
-
 /*Tthis is for the create page*/
 
 .table-container {
@@ -732,7 +730,6 @@ th:last-child {
   border-right: 1px solid #cecfd5;
 }
 
-
 td {
   border-bottom: 1px solid #cecfd5;
   border-right: 1px solid #cecfd5;
@@ -747,8 +744,6 @@ td:first-child {
   display: block;
   text-align: left;
 }
-
-
 
 .text-offset {
   color: black;
@@ -781,14 +776,12 @@ td:first-child {
   border-color: rgb(47, 51, 92);
 }
 
-.edit{
-  background: grey;
+.btn-warning {
+  background: rgb(19, 97, 12);
 }
-.delete {
-  background: #d9534f;
+.btn-danger {
+  background: #ac413e;
 }
-
-
 
 /* 
     This is for the FORM attribute 
@@ -801,8 +794,6 @@ td:first-child {
   width: 80%;
   text-align: center;
 }
-
-
 
 .form-field {
   display: flex;
@@ -837,9 +828,6 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
 }
-
-
-
 
 label {
   text-align: left;
