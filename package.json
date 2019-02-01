@@ -4,7 +4,10 @@
   "description": "This is a Site were User can go vote and use for the coming elections",
   "main": "./server/app.js",
   "scripts": {
-    "start": "babel-node ./server/src/app.js",
+    "start": "node ./server/src/app.js",
+    "build": "npm run clean && babel server -d server/dist",
+    "clean": "rm -rf server/dist",
+    "heroku-postbuild": "npm run build",
     "test": "mocha --require @babel/register ./tests/test.js",
     "start:dev": "nodemon --watch server --exec babel-node server/src/app.js"
   },
